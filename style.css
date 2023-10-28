@@ -27,6 +27,7 @@
 }
 .add-button{
   width: 40px;
+  cursor: pointer ;
 }
 button{
   background: none;
