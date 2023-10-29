@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family:'Finger Paint',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}   
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: url(images/1328922.png);
+  padding: 10px;
+}
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 25px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h1 img {
+  width: 50px;
+  margin-right: 20px;
+}
+.add-button{
+  width: 40px;
+}
+button{
+  background: none;
+  border: none;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding: 5px;
+}
+input{
+  flex:1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+  font-size: 1.1rem;
+}
+h1{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+ul li {
+  list-style: none;
+  font-size: 14px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 50px;
+  background-image: url(images/icons8-unchecked-100\ \(1\).png);
+  background-size: cover;
+  background-position: center;
+  top: 3px;
+  left: 0px;
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(images/icons8-checked-100.png);
+  border-radius: 50%;
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 40px;
+  text-align: center;
+}
+
+@media(min-width:425px){
+  .todo-app h1 img{
+    width: 70px;
+    transition: 1s;
+  }
+  h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+  }
+  input{
+    font-size: 1.5rem;
+  }
+  ul li{
+    font-size: 1.45rem;
+    transition: 1s;
+    padding-left: 65px;
+    margin-bottom: 10px;
+  }
+  .row{
+    margin-bottom: 20px;
+    transition: 1s;
+  }
+  .add-button{
+    margin-right: 10px;
+    width: 60px;
+    transition: 1s;
+  }
+  ul li::before{
+    width: 50px;
+  }
+}
